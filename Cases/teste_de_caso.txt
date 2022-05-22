@@ -1,3 +1,5 @@
+VISANDO UMA MELHOR VISUALIZAÇÃO DOS CASOS, RECOMENDA-SE ABRIR ESSE TXT NO VSCODE OU EM ALGUMA IDE
+
 //User Story:
     Eu como usuário comprador da store
     Gostaria de ter acesso à produtos Eco-Friendly
@@ -17,6 +19,13 @@
     Dado que estou na aba de coleçoes eco-Friendly;
     Quando realizo uma pesquisa por um determinado produto;
     Então devo ver na minha tela uma lista de produtos relacionados a pesquisa;
+
+--Verificar a opção de notificação em falta de produto no estoque--
+    Dado que estou na pagina de um produto do meu interesse;
+    Quando tento realizar uma compra; 
+    E o produto nao está disponivel em estoque;
+    Então devo ver na minha tela uma opção de para que seja notificado quando o estoque for reposto;
+
 
 --Verificação de Existencia de Subcategorias--
     Dado que estou na aba de coleçoes eco-Friendly;
@@ -68,28 +77,26 @@
         Entao devo ver todos os produtos eco-friendly adicionados anteriormente;  
     
 
+### Casos a Serem Automatizados ###
+        Pesquisa de Itens Eco (feito)
+        Entrar na Coleção Eco (feito)
+        Verificar a utilização das Subcategorias (feito)
+        Adicionar um item ao carrinho (feito)
+        Adicionar multiplos itens ao carrinho (feito)
+        
 
-Automatizar Pesquisa de Itens Eco 
-            categorias 
-            subcategorias 
-            adicionar um item eco// adc mais de 2 itens 
-            verificação do login de compra 
-            campos de detalhes
-            adicionar a white list
+        -Campos de Detalhes (descrição,recomendados,tabela de tamanhos) 
+        -Adicionar produto a WishList    
+        -Verificar o formulario de login, que é solicitado para efetuar a compra.
+            "Esses são cenários importantes de serem testados a fim de validar a parte de aquisição do produto.
+             Porém devido ao tempo demandado de elaboração e infelizmente estou com uma crise de amigdalite que 
+             me deixa bem mais indisposto decidi dar prioridade a uma implantação mais clean e com boas práticas"
 
 
 
 
 
-            /// <reference types="cypress" />
 
 
-describe('Test e2e to Challenge New Working', () => {
-  it('search for a product in the eco-friendly category', () => {
-    cy.visit('https://shop.googlemerchandisestore.com')
-    cy.wait(5)
-    cy.get('.navbar-row-1 > .container-navbar-menu-button > .navbar-brand > .material-icons').click()
-    cy.get(':nth-child(5) > .collapsible-header > .material-icons').click()
-    cy.xpath('//*[@id="slide-out"]/ul[1]/li[5]/div/ul/li[4]/a').click()
-  });
-});
+
+
